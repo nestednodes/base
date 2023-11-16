@@ -48,6 +48,7 @@ export default function Home() {
         TOKEN_CONTRACT_ABI,
         signer
       );
+      
       console.log("Amount Eth: ", burnAmount);
       const tx = await tokenContract.burn(BigInt(burnAmount * 10 ** 18));
       setLoading(true);
